@@ -1,16 +1,16 @@
-precio = ARGV[0].to_f
-usuarios_normales = ARGV[1].to_f
-usuarios_premium = ARGV[2].to_f
-usuarios_gratuitos = ARGV[3].to_f
-gastos = ARGV[4].to_f
+price = ARGV[0].to_f
+users_reg = ARGV[1].to_f
+users_premium = ARGV[2].to_f
+users_free = ARGV[3].to_f
+expenses = ARGV[4].to_f
 
-ingresos=(precio * usuarios_normales) + (2*(usuarios_premium * precio))
+income=(price * users_reg) + (2*(users_premium * price))
 
-utilidades = (ingresos - gastos)
+profit = (income - expenses)
 
-if utilidades > 0
-    utilidades = (utilidades *0.65)
-    puts "Felicidades, la utilidad es de #{utilidades} dólares"
+if profit > 0
+    profit = (profit *0.65)
+    puts "Felicidades, la utilidad es de #{profit} dólares"
 else
-    puts "No hay utilidad ni impuesto."
+    puts "No hay utilidad, no paga impuesto."
 end

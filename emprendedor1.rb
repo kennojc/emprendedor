@@ -1,10 +1,10 @@
-precio = ARGV[0].to_f
-usuarios = ARGV[1].to_f
-gastos = ARGV[2].to_f
-utilidades =(precio*usuarios-gastos)
-if utilidades > 0
-    utilidades = (precio*usuarios-gastos)-(utilidades*0.35)
-    puts "Felicidades, la utilidad es de #{utilidades} dólares"
+price = ARGV[0].to_f
+users = ARGV[1].to_f
+expenses = ARGV[2].to_f
+profit =(price*users-expenses)
+if profit > 0
+    profit = (price*users-expenses)-(profit*0.35)
+    puts "Felicidades, la utilidad es de #{profit} dólares"
 else
-    puts "No hay utilidad ni impuesto."
+    puts "No hay utilidad, se libera del impuesto."
 end
